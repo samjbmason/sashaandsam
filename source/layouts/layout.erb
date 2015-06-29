@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Sasha &amp; Sam" %></title>
+
+    <%= stylesheet_link_tag "all" %>
+
+  </head>
+
+  <body class="<%= page_classes %>">
+
+    <canvas class="confetti"></canvas>
+
+    <article>
+      <%= yield %>
+    </article>
+
+    <%= javascript_include_tag "all" %>
+  </body>
+</html>
