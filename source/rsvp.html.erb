@@ -1,0 +1,116 @@
+<%= partial 'inner-header' %>
+
+<section class="page-content container">
+  <h2>RSVP</h2>
+
+
+  <form class="container rsvp-form" accept-charset="UTF-8" action="https://formkeep.com/f/69b9f95b1c5b" method="POST">
+
+    <input type="hidden" name="utf8" value="✓">
+
+    <div class="field-group">
+      <label>Your name</label>
+      <input type="text" name="name" value="">
+    </div>
+
+    <div class="q-group">
+      <div class="field-group question">
+        <label>Which part of the wedding are you coming to?</label>
+
+        <label class="radio-group">
+          <input type="radio" name="which-part" value="All Day" data-fork="true">
+          All Day Pass
+        </label>
+
+        <label class="radio-group">
+          <input type="radio" name="which-part" value="Evening and Ceremony" data-fork="false">
+          Evening (&amp; Ceremony) Pass
+        </label>
+      </div>
+
+      <div class="field-group result" data-result="true">
+        <label>Will you be attending?</label>
+
+        <label class="radio-group">
+          <input type="radio" name="attending" value="Yes">
+          Yes, I wouldn’t miss it
+        </label>
+
+        <label class="radio-group">
+          <input type="radio" name="attending" value="No">
+          No, I can’t make it unfortunately
+        </label>
+      </div>
+
+      <!-- Only show if attending evening -->
+      <div class="result" data-result="false">
+        <div class="field-group">
+          <label>Will you be attending the ceremony?</label>
+
+          <label class="radio-group">
+            <input type="radio" name="attending" value="Yes">
+            Yes, I wouldn’t miss it
+          </label>
+
+          <label class="radio-group">
+            <input type="radio" name="attending" value="No">
+            No, I can’t make it unfortunately
+          </label>
+        </div>
+
+        <div class="field-group">
+          <label>Will you be attending the evening party?</label>
+
+          <label class="radio-group">
+            <input type="radio" name="attending" value="Yes">
+            Yes, I wouldn’t miss it
+          </label>
+
+          <label class="radio-group">
+            <input type="radio" name="attending" value="No">
+            No, I can’t make it unfortunately
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-group">
+      <div class="field-group">
+        <label>Will you be bringing a plus one?</label>
+
+        <label class="radio-group">
+          <input type="radio" name="plus-one" value="Yes">
+          Yes
+        </label>
+
+        <label class="radio-group">
+          <input type="radio" name="plus-one" value="No">
+          No
+        </label>
+      </div>
+
+      <!-- Only show if plus one is selected -->
+      <div class="result plus-one-details">
+        <div class="field-group">
+          <label for="">Your guests name</label>
+          <input type="text" name="guests-name" value="">
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="">What song would get you on the dance floor?</label>
+      <input type="text" name="song-choice" value="">
+    </div>
+
+
+    <div class="field-group">
+      <label for="">Do you have any special dietary requirements (Vegetarian/ Allergies/ No red meat)?</label>
+      <textarea name="special-requirements"></textarea>
+    </div>
+
+
+    <button type="submit">Submit</button>
+  </form>
+
+</section>
