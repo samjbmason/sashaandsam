@@ -1,5 +1,6 @@
 $('.stripe-number').payment('formatCardNumber')
 $('.stripe-exp-date').payment('formatCardExpiry')
+$('.stripe-cvc').payment('formatCardCVC')
 $('[data-numeric]').payment('restrictNumeric')
 
 $form = $('.payment-form')
@@ -50,6 +51,7 @@ stripeResponseHandler = (status, response) ->
 makePayment = ->
   formData = $('.payment-form').serialize()
   $.post('http://sashaandsam-payment.dev/charge', formData, (data) ->
+    console.log(data)
     finishedPayment(data)
   )
 
