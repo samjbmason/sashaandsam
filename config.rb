@@ -31,6 +31,7 @@ activate :directory_indexes
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  set :stripe_publishable_key, 'pk_test_lamQrESkqXdm9SffXRaVfc0W'
 end
 
 # Methods defined in the helpers block are available in templates
@@ -64,4 +65,5 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  set :stripe_publishable_key, 'pk_live_HS4bsPxYf3REsuDr1GKUAz8z'
 end
