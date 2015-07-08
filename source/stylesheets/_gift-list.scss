@@ -1,0 +1,242 @@
+.honeymoon-items {
+  @include clearfix;
+}
+
+.a-third {
+  width: 33.3333%;
+  float: left;
+}
+
+.honeymoon-item {
+  margin: 0 10px;
+  background-color: #FFFFFF;
+  border: 1px solid $red;
+  text-align: center;
+}
+
+.honeymoon-item__bg {
+  background-image: url('/images/usa.png');
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  display: table;
+}
+
+.honeymoon-item__buy {
+  width: 100%;
+  background-color: $red;
+  color: #FFFFFF;
+  border: none;
+}
+
+.honeymoon-item__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgba(255,255,255,0.6);
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.honeymoon-item__price {
+  color: $red;
+  margin: 10px 0;
+}
+
+.honeymoon-item__description {
+  padding: 0 5px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Modal */
+.modal-inview {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 300;
+  background-color: rgba($black, 0.6);
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 400;
+  width: 300px;
+  @include transform(translate(-50%, -50%));
+  background-color: #FFFFFF;
+  box-shadow: 0 0 20px rgba($black, 0.8);
+  display: none;
+}
+.payment-form {
+  padding: 10px 20px 10px;
+  @include clearfix;
+
+  label {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .form-field {
+    margin-bottom: 10px;
+  }
+}
+
+.payment-form__button {
+  width: 100%;
+  display: block;
+  &:hover .loading {
+    border-color: #FFFFFF;
+    border-right-color: transparent;
+  }
+}
+
+.form-field--half-width {
+  float: left;
+  width: 50%;
+}
+
+.side-note {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+input.stripe-exp-date {
+  border-right: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  border: 1px solid $red;
+  height: 22px;
+  width: 22px;
+  background-image: url("/images/close.png");
+  background-size: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+.modal__header {
+  padding: 0;
+  height: 100px;
+  display: table;
+  text-align: center;
+  width: 100%;
+  background-image: url('/images/usa.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid $red;
+  h2 {
+    background-color: rgba(255,255,255,0.6);
+    font-family: $font;
+    font-size: 18px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.powered-by-stripe {
+  width: 100px;
+  float: right;
+  margin-top: 10px;
+  border-bottom: none;
+}
+
+.has-error {
+  box-shadow: 0 0 4px 1px rgba(255,0,0,0.5);
+}
+
+.payment-errors {
+  font-size: 14px;
+  text-align: center;
+  background-color: $red;
+  color: #FFFFFF;
+  margin: 5px 0;
+
+  span {
+    padding: 2px 0;
+  }
+}
+
+.processing {
+  .loading {
+    display: inline-block;
+  }
+  .button-text {
+    display: none;
+  }
+}
+
+.loading {
+  @include animation-duration(0.75s);
+  @include animation-iteration-count(infinite);
+  @include animation-name(spinner);
+  @include animation-timing-function(linear);
+  @include size(20px);
+  border: 2px solid $red;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: none;
+  margin-top: 5px;
+}
+
+.success-payment {
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+
+  h3 {
+    margin: 10px 0;
+  }
+  img {
+    width: 80px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0 0 10px;
+  }
+}
+
+.shake {
+  @include animation-name(shake);
+  @include animation-duration(1s);
+  animation-fill-mode: both;
+}
+
+@include keyframes(spinner) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+@include keyframes(shake) {
+  0%, 100% {
+    @include transform(translate3d(0, 0, 0));
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    @include transform(translate3d(-6px, 0, 0));
+  }
+
+  20%, 40%, 60%, 80% {
+    @include transform(translate3d(6px, 0, 0));
+  }
+}
