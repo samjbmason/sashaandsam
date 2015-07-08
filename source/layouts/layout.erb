@@ -22,6 +22,10 @@
       <%= yield %>
     </article>
 
+    <script src="https://js.stripe.com/v2/"></script>
+    <script>
+      Stripe.setPublishableKey("<%= stripe_publishable_key %>")
+    </script>
     <%= javascript_include_tag "all" %>
   </body>
 </html>
