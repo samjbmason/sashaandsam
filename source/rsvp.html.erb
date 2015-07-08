@@ -15,15 +15,15 @@
 
     <div class="q-group">
       <div class="field-group question">
-        <label>Which part of the wedding are you coming to?</label>
+        <label>Which part of the wedding are you RSVPing for?</label>
 
         <label class="radio-group">
-          <input type="radio" name="which-part" value="All Day" data-fork="true">
+          <input type="radio" name="which part" value="All Day" data-fork="true">
           All Day Pass
         </label>
 
         <label class="radio-group">
-          <input type="radio" name="which-part" value="Evening and Ceremony" data-fork="false">
+          <input type="radio" name="which part" value="Evening and Ceremony" data-fork="false">
           Evening (&amp; Ceremony) Pass
         </label>
       </div>
@@ -32,12 +32,12 @@
         <label>Will you be attending?</label>
 
         <label class="radio-group">
-          <input type="radio" name="attending" value="Yes">
+          <input type="radio" name="attending all day" value="Yes">
           Yes, I wouldn’t miss it
         </label>
 
         <label class="radio-group">
-          <input type="radio" name="attending" value="No">
+          <input type="radio" name="attending all day" value="No">
           No, I can’t make it unfortunately
         </label>
       </div>
@@ -48,12 +48,12 @@
           <label>Will you be attending the ceremony?</label>
 
           <label class="radio-group">
-            <input type="radio" name="attending" value="Yes">
+            <input type="radio" name="attending ceremony" value="Yes">
             Yes, I wouldn’t miss it
           </label>
 
           <label class="radio-group">
-            <input type="radio" name="attending" value="No">
+            <input type="radio" name="attending ceremony" value="No">
             No, I can’t make it unfortunately
           </label>
         </div>
@@ -62,29 +62,29 @@
           <label>Will you be attending the evening party?</label>
 
           <label class="radio-group">
-            <input type="radio" name="attending" value="Yes">
+            <input type="radio" name="attending evening" value="Yes">
             Yes, I wouldn’t miss it
           </label>
 
           <label class="radio-group">
-            <input type="radio" name="attending" value="No">
+            <input type="radio" name="attending evening" value="No">
             No, I can’t make it unfortunately
           </label>
         </div>
       </div>
     </div>
 
-    <div class="q-group">
+    <div class="q-group plus-one">
       <div class="field-group">
         <label>Will you be bringing a plus one?</label>
 
         <label class="radio-group">
-          <input type="radio" name="plus-one" value="Yes">
+          <input type="radio" name="plus one" value="Yes">
           Yes
         </label>
 
         <label class="radio-group">
-          <input type="radio" name="plus-one" value="No">
+          <input type="radio" name="plus one" value="No">
           No
         </label>
       </div>
@@ -92,25 +92,36 @@
       <!-- Only show if plus one is selected -->
       <div class="result plus-one-details">
         <div class="field-group">
-          <label for="">Your guests name</label>
-          <input type="text" name="guests-name" value="">
+          <label for="">Your guests name(s)</label>
+          <input type="text" name="guests name" value="">
         </div>
       </div>
     </div>
 
-    <div class="field-group">
+    <div class="field-group which-song">
       <label for="">What song would get you on the dance floor?</label>
-      <input type="text" name="song-choice" value="">
+      <input type="text" name="song choice" value="">
     </div>
 
 
-    <div class="field-group">
-      <label for="">Do you have any special dietary requirements (Vegetarian/ Allergies/ No red meat)?</label>
-      <textarea name="special-requirements"></textarea>
+    <div class="field-group special-requirements">
+      <label for="">Do you have any special dietary requirements (e.g. vegetarian/ allergies/ no red meat)?</label>
+      <textarea name="special requirements"></textarea>
+    </div>
+
+    <div class="sad-rufus">
+      <img src="/images/rufus.png">
+      <h3>Oh no! You have made Rufus sad, but we understand.</h3>
     </div>
 
 
     <button type="submit">Submit</button>
   </form>
+
+
+  <div class="rsvp-confirmed">
+    <img src="/images/us.png" alt="Us">
+    <h3>Thank you for RSVP'ing</h3>
+  </div>
 
 </section>
