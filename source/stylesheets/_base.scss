@@ -6,7 +6,8 @@ body {
   font-family: $font;
   color: $blue;
   font-size: 16px;
-  line-height: 1.5;
+  font-weight: 300;
+  line-height: 1.8;
   padding: 20px;
 }
 
@@ -15,7 +16,7 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 img {
@@ -27,6 +28,12 @@ img {
 a {
   text-decoration: none;
   color: $red;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s;
+  padding-bottom: 1px;
+  &:hover {
+    border-bottom-color: $red;
+  }
 }
 
 nav {
@@ -35,6 +42,7 @@ nav {
   color: $red;
   a {
     padding: 0 10px;
+    border-bottom: none;
   }
 }
 
@@ -59,10 +67,14 @@ header {
 
 h1 {
   font-weight: 300;
+  line-height: 1.5;
   span {
     font-family: $sp-font;
     font-weight: 400;
     font-size: 48px;
+  }
+  a {
+    border-bottom: none;
   }
 }
 
@@ -70,6 +82,7 @@ h2 {
   font-family: $sp-font;
   font-weight: 400;
   font-size: 48px;
+  line-height: 1.4;
   text-align: center;
   margin: 20px 0;
 }
@@ -86,7 +99,7 @@ p {
 
 ul {
   list-style: none;
-  margin: 24px 0;
+  margin: 0 0 24px;
   padding: 0;
   li {
     margin: 10px 0;
@@ -124,5 +137,28 @@ ul {
     vertical-align: middle;
     font-size: 16px;
     text-align: right;
+  }
+}
+
+.sad-rufus {
+  text-align: center;
+  img {
+    width: 50px;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.rsvp-confirmed {
+  text-align: center;
+  display: none;
+  img {
+    width: 100px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-top: 20px;
   }
 }
