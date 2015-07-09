@@ -50,7 +50,8 @@ stripeResponseHandler = (status, response) ->
 
 makePayment = ->
   formData = $('.payment-form').serialize()
-  $.post('http://sashaandsam-payment.dev/charge', formData, (data) ->
+  siteUrl = $('.payment-form').attr('action')
+  $.post(siteUrl, formData, (data) ->
     console.log(data)
     finishedPayment(data)
   )

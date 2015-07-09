@@ -32,6 +32,7 @@ activate :directory_indexes
 configure :development do
   activate :livereload
   set :stripe_publishable_key, 'pk_test_lamQrESkqXdm9SffXRaVfc0W'
+  set :site_url, 'http://sashaandsam.dev'
 end
 
 # Methods defined in the helpers block are available in templates
@@ -66,4 +67,5 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
   set :stripe_publishable_key, 'pk_live_HS4bsPxYf3REsuDr1GKUAz8z'
+  set :site_url, 'https://sashaandsam.co.uk'
 end
