@@ -67,5 +67,15 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
   set :stripe_publishable_key, 'pk_live_HS4bsPxYf3REsuDr1GKUAz8z'
-  set :site_url, 'https://payment.sashaandsam.co.uk'
+  set :site_url, 'https://sashaandsam-payment.herokuapp.com'
+end
+
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end

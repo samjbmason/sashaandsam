@@ -7,3 +7,5 @@ gem 'middleman-livereload', '~> 3.1.0'
 
 # CSS Mixin Lib
 gem 'bourbon'
+
+gem 'middleman-deploy', '~> 1.0'
