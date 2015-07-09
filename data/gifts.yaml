@@ -1,0 +1,14 @@
+- id: 1
+  url: mustang
+  title: Hire a Mustang for the day
+  price: "100.00"
+  description: Driving down Route 1 listening to music with the top down
+  amount: 10
+
+- id: 2
+  url: donut
+  title: Get some donuts at the awesomo Voodoo Donuts
+  price: "1.10"
+  description: Awesome donuts in an awesome city
+  amount: 10
+
