@@ -1,14 +1,9 @@
-<header class="header--home">
-  <img src="/images/us.png" alt="Sasha &amp; Sam">
-  <h1>Sasha &amp; Sam are getting married <span>12 September 2015</span></h1>
+<header class="site-header site-header--home">
 
-  <nav>
-    <%= link_to 'Home', '/' %> /
-    <%= link_to 'On The Day', 'details' %> /
-    <%= link_to 'Accommodation', 'accommodation' %> /
-    <%= link_to 'RSVP', 'rsvp' %> /
-    <%= link_to 'Gift List', 'gift-list' %>
-  </nav>
+  <%= image_tag 'us.png', class: 'site-header__logo' %>
+  <h1 class="site-header__title">Sasha &amp; Sam are getting married <span class="site-header__date">12 September 2015</span></h1>
+
+  <%= partial 'common/nav' %>
 </header>
 
 <section class="container">
