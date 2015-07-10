@@ -61,6 +61,10 @@ finishedPayment = (response) ->
   if response.error
     $form.find('.payment-errors').html("<span>#{response.error.message}</span>")
   else
-    $form.slideUp()
-    $('.success-payment').fadeIn()
-  $('.payment-form__button').prop('disabled', false).removeClass('processing')
+    showSuccess()
+  $('.gift-form__button').prop('disabled', false).removeClass('processing')
+
+showSuccess = ->
+  $('.js-success-payment').fadeIn(400, ->
+    $('.js-thankyou').addClass('anim-bounce-in')
+  )
