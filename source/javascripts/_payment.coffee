@@ -1,9 +1,8 @@
 $('.stripe-number').payment('formatCardNumber')
 $('.stripe-exp-date').payment('formatCardExpiry')
 $('.stripe-cvc').payment('formatCardCVC')
-$('[data-numeric]').payment('restrictNumeric')
 
-$form = $('.payment-form')
+$form = $('.js-gift-form')
 
 $.fn.toggleInputError = (erred) ->
   this.toggleClass('has-error', erred)
@@ -17,14 +16,14 @@ $.fn.toggleInputError = (erred) ->
 $form.on('submit', ->
   expDate = $('.stripe-exp-date').payment('cardExpiryVal')
 
-  $('.payment-form__email').toggleInputError(!$('.payment-form__email').val())
+  $('.gift-form__email').toggleInputError(!$('.gift-form__email').val())
   $('.stripe-name').toggleInputError(!$('.stripe-name').val())
   $('.stripe-number').toggleInputError(!$.payment.validateCardNumber($('.stripe-number').val()))
   $('.stripe-exp-date').toggleInputError(!$.payment.validateCardExpiry(expDate))
   $('.stripe-cvc').toggleInputError(!$.payment.validateCardCVC($('.stripe-cvc').val()))
 
   if $('.has-error').length is 0
-    $('.payment-form__button').prop('disabled', true).addClass('processing')
+    $('.gift-form__button').prop('disabled', true).addClass('processing')
     Stripe.card.createToken(
       name: $('.stripe-name').val()
       number: $('.stripe-number').val()
@@ -40,7 +39,7 @@ $form.on('submit', ->
 stripeResponseHandler = (status, response) ->
   if response.error
     $form.find('.payment-errors').html("<span>#{response.error.message}</span>")
-    $('.payment-form__button').prop('disabled', false).removeClass('processing')
+    $('.gift-form__button').prop('disabled', false).removeClass('processing')
   else
     token = response.id
     $form.append($('<input type="hidden" name="stripeToken">').val(token))
@@ -49,13 +48,12 @@ stripeResponseHandler = (status, response) ->
 
 
 makePayment = ->
-  formData = $('.payment-form').serialize()
-  siteUrl = $('.payment-form').attr('action')
+  formData = $form.serialize()
+  siteUrl = $form.attr('action')
   $.post(siteUrl, formData, (data) ->
     console.log(data)
     finishedPayment(data)
   )
-
   return false
 
 
