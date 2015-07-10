@@ -8,17 +8,14 @@
   <p>Fuelled by our love for American comedies (Portlandia, Park and Recs &amp; Arrested Development), Sam’s mecca of Silicon Valley and Sasha’s childhood affection for 80s Americana what better reason than our honeymoon to make a pilgrimage to the US of A. Some songs on our wedding day pay homage to these spaces and places. Keep your ears open.</p>
 
 
-  <div class="honeymoon-items">
-    <% data.gifts.list.each do |g| %>
-    <div class="a-third">
-      <div class="honeymoon-item">
-        <div class="honeymoon-item__bg">
-          <h3 class="honeymoon-item__title"><%= g.title %></h3>
-        </div>
-        <h4 class="honeymoon-item__price" data-price="<%= g.pricePennies %>">£<%= g.priceText %></h4>
-        <p class="honeymoon-item__description"><%= g.description %></p>
-        <button type="button" class="honeymoon-item__buy">Buy this</button>
-      </div>
+  <div class="honeymoon-items u-spt">
+    <% data.gifts.each do |g| %>
+    <div class="hmi" data-id="<%= g.id %>">
+      <%= image_tag 'usa.png' %>
+      <h3 class="hmi__title"><%= g.title %></h3>
+      <p class="hmi__price" data-price="<%= to_pennies(g.price) %>">£<%= g.price %></p>
+      <p class="hmi__description"><%= g.description %></p>
+      <%= link_to 'Buy this', "#{g.url}.html", class: 'btn btn--full-width' %>
     </div>
     <% end %>
   </div>
