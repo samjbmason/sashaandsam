@@ -18,8 +18,15 @@ activate :directory_indexes
 # end
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+data.gifts.each do |gift|
+  proxy "/#{gift.url}.html", '/buy-gift-template.html', locals: {
+    id: gift.id,
+    title: gift.title,
+    price: gift.price,
+    description: gift.description
+  },
+  ignore: true
+end
 
 ###
 # Helpers
