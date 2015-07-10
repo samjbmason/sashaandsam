@@ -1,0 +1,144 @@
+.gift-form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gift-form__button {
+  &:hover .loading {
+    border-color: #FFFFFF;
+    border-right-color: transparent;
+  }
+}
+
+.powered-by-stripe {
+  width: 100px;
+  float: right;
+  margin-top: 10px;
+}
+
+.shake {
+  @include animation(shake 1s both);
+}
+
+.has-error {
+  position: relatve;
+  z-index: 20;
+  box-shadow: 0 0 4px 1px rgba(255,0,0,0.5);
+}
+
+.payment-errors {
+  text-align: center;
+  background-color: $red;
+  color: #FFFFFF;
+  margin: 5px 0;
+
+  span {
+    display: block;
+    padding: 5px 0;
+  }
+}
+
+.processing {
+  .loading {
+    display: inline-block;
+  }
+
+  .button-text {
+    display: none;
+  }
+}
+
+.loading {
+  @include animation(spinner 0.75s linear infinite);
+  @include size(20px);
+  border: 2px solid $red;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: none;
+  margin-top: 5px;
+}
+
+.success-payment {
+  display: none;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.thankyou {
+  width: 300px;
+  height: 280px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -140px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  img {
+    width: 80px;
+  }
+}
+
+.anim-bounce-in {
+  @include animation(bounceInDown 1s forwards)
+}
+
+@include keyframes(spinner) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+@include keyframes(shake) {
+  0%, 100% {
+    @include transform(translate3d(0, 0, 0));
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    @include transform(translate3d(-6px, 0, 0));
+  }
+
+  20%, 40%, 60%, 80% {
+    @include transform(translate3d(6px, 0, 0));
+  }
+}
+
+@include keyframes(bounceInDown) {
+  0%, 60%, 75%, 90%, 100% {
+    @include animation-timing-function(cubic-bezier(0.215, 0.610, 0.355, 1.000));
+  }
+
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, -3000px, 0));
+  }
+
+  60% {
+    opacity: 1;
+    @include transform(translate3d(0, 25px, 0));
+  }
+
+  75% {
+    @include transform(translate3d(0, -10px, 0));
+  }
+
+  90% {
+    @include transform(translate3d(0, 5px, 0));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+  }
+}
