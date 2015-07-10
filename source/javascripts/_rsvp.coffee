@@ -43,7 +43,7 @@ RevealFormSections = {
 RevealFormSections.init()
 
 
-$('.rsvp-form').on('submit', ->
+$('.form--rsvp').on('submit', ->
   formData = $(this).serialize()
   $.post('https://formkeep.com/f/69b9f95b1c5b', formData, ->
     $('.rsvp-form').fadeOut(300, ->
