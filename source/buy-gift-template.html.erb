@@ -5,10 +5,21 @@
 
     <a href="#" class="gift-form__close"></a>
 
-    <header class="gift-form__header">
-      <h2><%= title %></h2>
-      <p><%= description %></p>
+    <header class="gift-form__header u-spb">
+      <%= image_tag "#{id}.png", class: 'gift-form__icon' %>
+      <h2 class="gift-form__title"><%= title %></h2>
+      <p class="gift-form__description"><%= description %></p>
     </header>
+
+    <% if id == 9 %>
+    <div class="field-group u-cf">
+      <label>Amount</label>
+      <div class="field-w-addon field-group--half-width">
+        <span class="field__addon">£</span>
+        <input type="text" class="gift-form__donated-amount" placeholder="10.00">
+      </div>
+    </div>
+    <% end %>
 
     <div class="field-group field-group--half-width">
       <label>From</label>
@@ -52,7 +63,7 @@
     <input type="hidden" name="item" value="<%= title %>" class="gift-form__item">
 
     <button type="submit" class="gift-form__button btn--full-width">
-      <span class="button-text">Pay £<%= price %></span>
+      <span class="button-text">Pay <%= "£#{price}" if id != 9 %></span>
       <span class="loading"></span>
     </button>
 
@@ -61,8 +72,8 @@
     </a>
   </form>
 
-  <div class="success-payment js-success-payment">
-    <div class="thankyou js-thankyou">
+  <div class="success-payment js-success-payment modal">
+    <div class="thankyou js-thankyou modal__inner">
       <img src="/images/us.png" alt="Thanks">
       <h3>Thank you so much, we can't wait to share our pics with you!</h3>
       <p class="small-print">You will receive a receipt to your email address shortly.</p>
