@@ -4,12 +4,15 @@
 
 .hmi {
   width: 31.76157%;
+  height: 295px;
   margin-right: 2.35765%;
+  margin-top: 3rem;
   float: left;
   background-color: #FFFFFF;
   text-align: center;
   margin-bottom: 1.25rem;
   padding: 5px;
+  position: relative;
   &:nth-child(3n) {
     margin-right: 0;
   }
@@ -27,4 +30,9 @@
 
 .hmi__description {
   font-size: .75rem;
+}
+
+.hmi__buy-btn {
+  position: absolute;
+  bottom: 0;
 }
