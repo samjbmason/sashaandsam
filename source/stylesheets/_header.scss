@@ -13,6 +13,9 @@
   font-weight: 300;
   line-height: 1.4;
   color: $blue;
+  a {
+    color: currentcolor;
+  }
 }
 
 .site-header__date {
