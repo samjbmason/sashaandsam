@@ -5,3 +5,7 @@
 .u-spb {
   margin-bottom: 3rem;
 }
+
+.u-cf {
+  @include clearfix;
+}
