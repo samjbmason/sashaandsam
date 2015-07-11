@@ -12,13 +12,15 @@ RevealFormSections = {
   displayChoice: ->
     $('[data-fork]').on('change', ->
       qGroup = $(this).closest('.q-group')
+      resultTrue = qGroup.find('[data-result="true"]')
+      resultFalse = qGroup.find('[data-result="false"]')
 
       if $(this).data('fork') is true
-        qGroup.find('[data-result="false"]').slideUp()
-        qGroup.find('[data-result="true"]').slideDown()
+        resultFalse.slideUp()
+        resultTrue.slideDown()
       else
-        qGroup.find('[data-result="true"]').slideUp()
-        qGroup.find('[data-result="false"]').slideDown()
+        resultTrue.slideUp()
+        resultFalse.slideDown()
     )
 
   showPlusOne: ->
@@ -44,12 +46,15 @@ RevealFormSections.init()
 
 
 $('.form--rsvp').on('submit', ->
-  formData = $(this).serialize()
-  $.post('https://formkeep.com/f/69b9f95b1c5b', formData, ->
-    $('.rsvp-form').fadeOut(300, ->
-      $('.rsvp-confirmed').fadeIn()
-    )
+  $('.js-rsvp-name').toggleInputError(!$('.js-rsvp-name').val())
 
-  )
+  if $('.has-error').length is 0
+    formData = $(this).serialize()
+
+    $.post(
+      'https://formkeep.com/f/69b9f95b1c5b',
+      formData,
+      showModal($('.modal'), $('.sent-rsvp__thankyou'))
+    )
   return false
 )

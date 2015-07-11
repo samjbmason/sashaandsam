@@ -4,15 +4,6 @@ $('.stripe-cvc').payment('formatCardCVC')
 
 $form = $('.js-gift-form')
 
-$.fn.toggleInputError = (erred) ->
-  this.toggleClass('has-error', erred)
-  if erred
-    this.addClass('shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', ->
-      $(this).removeClass('shake')
-    )
-  return this
-
-
 $form.on('submit', ->
   expDate = $('.stripe-exp-date').payment('cardExpiryVal')
 
@@ -21,6 +12,13 @@ $form.on('submit', ->
   $('.stripe-number').toggleInputError(!$.payment.validateCardNumber($('.stripe-number').val()))
   $('.stripe-exp-date').toggleInputError(!$.payment.validateCardExpiry(expDate))
   $('.stripe-cvc').toggleInputError(!$.payment.validateCardCVC($('.stripe-cvc').val()))
+
+  # Only run this code if we a re on the donation page by lookign for the input element
+  if($('.gift-form__donated-amount').length)
+    amountFloat = parseFloat($('.gift-form__donated-amount').val())
+    $('.gift-form__price').val(amountFloat *100)
+
+  $('.payment-errors').empty()
 
   if $('.has-error').length is 0
     $('.gift-form__button').prop('disabled', true).addClass('processing')
@@ -51,7 +49,6 @@ makePayment = ->
   formData = $form.serialize()
   siteUrl = $form.attr('action')
   $.post(siteUrl, formData, (data) ->
-    console.log(data)
     finishedPayment(data)
   )
   return false
@@ -61,10 +58,5 @@ finishedPayment = (response) ->
   if response.error
     $form.find('.payment-errors').html("<span>#{response.error.message}</span>")
   else
-    showSuccess()
+    showModal($('.modal'), $('.js-thankyou'))
   $('.gift-form__button').prop('disabled', false).removeClass('processing')
-
-showSuccess = ->
-  $('.js-success-payment').fadeIn(400, ->
-    $('.js-thankyou').addClass('anim-bounce-in')
-  )
