@@ -47,6 +47,7 @@
       <input type="text" name="cvc" class="stripe-cvc" placeholder="•••">
     </div>
 
+    <input type="hidden" name="id" value="<%= id %>">
     <input type="hidden" name="price" value="<%= to_pennies(price) %>" class="gift-form__price">
     <input type="hidden" name="item" value="<%= title %>" class="gift-form__item">
 
