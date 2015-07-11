@@ -1,3 +1,5 @@
-//= require _jquery
-//= require _jquery.payment
+//= require jquery
+//= require jquery.payment
+//= require animate
+//= require utils
 //= require_tree .
