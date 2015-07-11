@@ -1,48 +1,52 @@
 - id: 1
   url: donuts
-  title: Box of donuts from Voodoo Donuts in Portland
+  title: Box of donuts from Voodoo Donuts
   price: "10.00"
-  description: Awesome donuts in an awesome city
+  description: Amazing donut store in Portland
 
 - id: 2
   url: surfing
   title: Surfing lessons on Malibu Beach
   price: "25.00"
-  description: Awesome donuts in an awesome city
+  description: If we managed to standup it will be a miracle
 
 - id: 3
   url: mustang
   title: Hire a Mustang to get around the states
   price: "50.00"
-  description: Driving down Route 1 listening to music with the top down
+  description: Driving down Route 1 with the top down
 
-- id: 5
+- id: 4
   url: chateau
   title: Sunset cocktails at the Chateau Marmont
   price: "55.00"
-  description: Driving down Route 1 listening to music with the top down
+  description: Drink like the celebs of La-La Land do
 
-- id: 6
+- id: 5
   url: island-farm
   title: A night in the Island Farm Retreat
   price: "75.00"
-  description: Driving down Route 1 listening to music with the top down
+  description: Beautiful eco-hotel in Portland
+
+- id: 6
+  url: segway
+  title: Segway tour of San Francisco
+  price: "70.00"
+  description: The best way to travel on two wheels
 
 - id: 7
-  url: segway
-  title: A segway tour of San Francisco
-  price: "70.00"
-  description: Driving down Route 1 listening to music with the top down
+  url: giants-game
+  title: Tickets to see a Giants game at AT&T Park
+  price: "100.00"
+  description: Maybe we will end up on Kiss-Cam
 
 - id: 8
-  url: giants-game
-  title: 2 Tickets to see a Giants game @ AT&T Park
-  price: "100.00"
-  description: Driving down Route 1 listening to music with the top down
+  url: air-fare
+  title: Airfare to the US of A
+  price: "250.00"
+  description: Help us get across the pond
 
 - id: 9
-  url: air-fare
-  title: Help us get across the pond
-  price: "250.00"
-  description: Driving down Route 1 listening to music with the top down
-
+  url: donation
+  title: Any donation
+  description: Any amount will go a long way and we will be hugely grateful
