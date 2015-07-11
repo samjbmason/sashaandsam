@@ -83,3 +83,21 @@ button, input[type="submit"], .btn {
   cursor: pointer;
   font-weight: 300;
 }
+
+.stripe-number {
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 28px;
+}
+
+.visa {
+  background-image: image-url('visa.png');
+}
+
+.amex {
+  background-image: image-url('amex.png');
+}
+
+.mastercard {
+  background-image: image-url('mastercard.png');
+}
