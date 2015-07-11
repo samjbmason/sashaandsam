@@ -22,7 +22,11 @@
       <%= yield %>
     </article>
 
-    <script async src="https://js.stripe.com/v2/"></script>
+    <footer class="u-spt u-spb">
+      <%= image_tag 'flowers.png', width: 232 %>
+    </footer>
+
+    <script src="https://js.stripe.com/v2/"></script>
     <script>Stripe.setPublishableKey("<%= stripe_publishable_key %>")</script>
     <%= javascript_include_tag 'all', async: true %>
   </body>
