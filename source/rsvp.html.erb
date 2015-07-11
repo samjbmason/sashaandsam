@@ -10,7 +10,7 @@
 
     <div class="field-group">
       <label>Your name</label>
-      <input type="text" name="name" value="">
+      <input type="text" name="name" value="" class="js-rsvp-name">
     </div>
 
     <div class="q-group">
@@ -118,9 +118,13 @@
   </form>
 
 
-  <div class="rsvp-confirmed">
-    <%= image_tag 'us.png' %>
-    <h3>Thank you for RSVP'ing</h3>
+  <div class="sent-rsvp js-sent-rsvp modal">
+    <div class="sent-rsvp__thankyou modal__inner">
+      <img src="/images/us.png" alt="Thanks">
+      <h3>Thank you so much, we can't wait to share our pics with you!</h3>
+      <p class="small-print">You will receive a receipt to your email address shortly.</p>
+      <%= link_to 'Go Home', '/', class: 'btn' %>
+    </div>
   </div>
 
 </section>
