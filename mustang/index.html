@@ -10,7 +10,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Sasha &amp; Sam</title>
 
-    <link href="../stylesheets/all-13cae84d.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/all-2cab37d9.css" rel="stylesheet" type="text/css" />
 
   </head>
 
@@ -40,10 +40,12 @@
 
     <a href="#" class="gift-form__close"></a>
 
-    <header class="gift-form__header">
-      <h2>Hire a Mustang to get around the states</h2>
-      <p>Driving down Route 1 listening to music with the top down</p>
+    <header class="gift-form__header u-spb">
+      <img class="gift-form__icon" src="../images/3-f1f10fb3.png" />
+      <h2 class="gift-form__title">Hire a Mustang to get around the states</h2>
+      <p class="gift-form__description">Driving down Route 1 with the top down</p>
     </header>
+
 
     <div class="field-group field-group--half-width">
       <label>From</label>
@@ -96,8 +98,8 @@
     </a>
   </form>
 
-  <div class="success-payment js-success-payment">
-    <div class="thankyou js-thankyou">
+  <div class="success-payment js-success-payment modal">
+    <div class="thankyou js-thankyou modal__inner">
       <img src="/images/us-a8a84970.png" alt="Thanks">
       <h3>Thank you so much, we can't wait to share our pics with you!</h3>
       <p class="small-print">You will receive a receipt to your email address shortly.</p>
@@ -108,8 +110,12 @@
 </section>
     </article>
 
-    <script async src="https://js.stripe.com/v2/"></script>
+    <footer class="u-spt u-spb">
+      <img width="232" src="../images/flowers-3afe669a.png" />
+    </footer>
+
+    <script src="https://js.stripe.com/v2/"></script>
     <script>Stripe.setPublishableKey("pk_live_HS4bsPxYf3REsuDr1GKUAz8z")</script>
-    <script src="../javascripts/all-81818389.js" type="text/javascript" async="true"></script>
+    <script src="../javascripts/all-e003250d.js" type="text/javascript" async="true"></script>
   </body>
 </html>
