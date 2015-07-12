@@ -8,7 +8,7 @@
   url: surfing
   title: Surfing lessons on Malibu Beach
   price: "25.00"
-  description: If we managed to standup it will be a miracle
+  description: If we managed to stand up it will be a miracle
 
 - id: 3
   url: mustang
@@ -42,11 +42,12 @@
 
 - id: 8
   url: air-fare
-  title: Airfare to the US of A
+  title: Airfare to <br>the US of A
   price: "250.00"
   description: Help us get across the pond
 
 - id: 9
   url: donation
-  title: Any donation
+  title: Any <br>donation
+  price: "?"
   description: Any amount will go a long way and we will be hugely grateful
