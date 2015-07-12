@@ -103,6 +103,10 @@
   width: 80px;
 }
 
+.sent-rsvp__thankyou {
+  height: 205px;
+}
+
 @include keyframes(spinner) {
   0% {
     @include transform(rotate(0deg));
