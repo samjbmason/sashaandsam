@@ -13,9 +13,7 @@
     <div class="hmi" data-id="<%= g.id %>">
       <%= image_tag "#{g.id}.png" %>
       <h3 class="hmi__title"><%= g.title %></h3>
-      <% if g.id != 9 %>
       <p class="hmi__price" data-price="<%= to_pennies(g.price) %>">£<%= g.price %></p>
-      <% end %>
       <p class="hmi__description"><%= g.description %></p>
       <%= link_to 'Buy this', "#{g.url}.html", class: 'btn btn--full-width hmi__buy-btn' %>
     </div>
