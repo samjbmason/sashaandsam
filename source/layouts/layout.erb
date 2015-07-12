@@ -13,13 +13,7 @@
     <%= partial("stylesheets/critical.css")  %>
     </style>
 
-    <script id="loadcss">
-    <%= partial 'javascripts/loadCSS.js' %>
-
-    loadCSS( 'stylesheets/all.css', document.getElementById("loadcss") );
-    </script>
-    <noscript><%= stylesheet_link_tag "all" %></noscript>
-
+    <%= stylesheet_link_tag "all" %>
 
   </head>
 
