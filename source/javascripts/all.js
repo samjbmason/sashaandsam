@@ -2,4 +2,6 @@
 //= require jquery.payment
 //= require animate
 //= require utils
-//= require_tree .
+//= require confetti
+//= require payment
+//= require rsvp
