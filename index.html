@@ -12,40 +12,39 @@
     <style>
     /* line 1, critical.css.scss */
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-/* line 7, critical.css.scss */
+/* line 6, critical.css.scss */
 body {
   margin: 0; }
 
-/* line 11, critical.css.scss */
+/* line 10, critical.css.scss */
 article,
 header,
 nav,
 section {
   display: block; }
 
-/* line 18, critical.css.scss */
+/* line 17, critical.css.scss */
 canvas {
   display: inline-block;
   vertical-align: baseline; }
 
-/* line 23, critical.css.scss */
+/* line 22, critical.css.scss */
 a {
   background-color: transparent; }
 
-/* line 27, critical.css.scss */
+/* line 26, critical.css.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
-/* line 32, critical.css.scss */
+/* line 31, critical.css.scss */
 img {
   border: 0; }
 
-/* line 36, critical.css.scss */
+/* line 35, critical.css.scss */
 html:before, html:after, body:before, body:after {
   content: "";
   background-color: #F1896E;
@@ -53,39 +52,39 @@ html:before, html:after, body:before, body:after {
   display: block;
   z-index: 200; }
 
-/* line 44, critical.css.scss */
+/* line 43, critical.css.scss */
 html:before {
   height: 20px;
   left: 0;
   right: 0;
   top: 0; }
 
-/* line 52, critical.css.scss */
+/* line 51, critical.css.scss */
 html:after {
   width: 20px;
   top: 0;
   right: 0;
   bottom: 0; }
 
-/* line 60, critical.css.scss */
+/* line 59, critical.css.scss */
 body:before {
   height: 20px;
   right: 0;
   bottom: 0;
   left: 0; }
 
-/* line 67, critical.css.scss */
+/* line 66, critical.css.scss */
 body:after {
   width: 20px;
   top: 0;
   bottom: 0;
   left: 0; }
 
-/* line 74, critical.css.scss */
+/* line 73, critical.css.scss */
 * {
   box-sizing: border-box; }
 
-/* line 78, critical.css.scss */
+/* line 77, critical.css.scss */
 body {
   font-family: "Bambino", sans-serif;
   color: #594F52;
@@ -94,7 +93,7 @@ body {
   line-height: 1.6;
   padding: 20px; }
 
-/* line 87, critical.css.scss */
+/* line 86, critical.css.scss */
 .container {
   max-width: 760px;
   margin: 0 auto;
@@ -102,30 +101,30 @@ body {
   position: relative;
   z-index: 10; }
 
-/* line 95, critical.css.scss */
+/* line 94, critical.css.scss */
 canvas {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10; }
 
-/* line 102, critical.css.scss */
+/* line 101, critical.css.scss */
 img {
   max-width: 100%;
   vertical-align: baseline; }
 
-/* line 107, critical.css.scss */
+/* line 106, critical.css.scss */
 a {
   text-decoration: none;
   color: #F1896E; }
 
-/* line 112, critical.css.scss */
+/* line 111, critical.css.scss */
 p a {
   border-bottom: 1px solid transparent;
   transition: border 0.3s;
   padding-bottom: 1px; }
 
-/* line 118, critical.css.scss */
+/* line 117, critical.css.scss */
 h2 {
   font-family: "Sign Painter", serif;
   font-weight: 400;
@@ -134,101 +133,51 @@ h2 {
   color: #778692;
   text-align: center; }
 
-/* line 127, critical.css.scss */
+/* line 126, critical.css.scss */
 .site-header {
   position: relative;
   z-index: 10;
   padding: 20px; }
 
-/* line 133, critical.css.scss */
+/* line 132, critical.css.scss */
 .site-header__logo {
   width: 180px; }
 
-/* line 137, critical.css.scss */
+/* line 136, critical.css.scss */
 .site-header__title {
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.4;
   color: #778692; }
 
-/* line 144, critical.css.scss */
+/* line 143, critical.css.scss */
 .site-header__date {
   font-family: "Sign Painter", serif;
   font-weight: 400;
   font-size: 3rem; }
 
-/* line 150, critical.css.scss */
+/* line 149, critical.css.scss */
 .site-header__nav {
   font-weight: 300;
   color: #F1896E;
   letter-spacing: 1px; }
-  /* line 155, critical.css.scss */
+  /* line 154, critical.css.scss */
   .site-header__nav a {
     padding: 0 10px; }
 
-/* line 161, critical.css.scss */
+/* line 160, critical.css.scss */
 .site-header--home {
   text-align: center; }
-  /* line 164, critical.css.scss */
+  /* line 163, critical.css.scss */
   .site-header--home .site-header__date {
     display: block; }
-  /* line 168, critical.css.scss */
+  /* line 167, critical.css.scss */
   .site-header--home .site-header__nav {
     font-size: 1.5rem; }
 
     </style>
 
-    <script id="loadcss">
-    function loadCSS( href, before, media, callback ){
-	"use strict";
-	// Arguments explained:
-	// `href` is the URL for your CSS file.
-	// `before` optionally defines the element we'll use as a reference for injecting our <link>
-	// By default, `before` uses the first <script> element in the page.
-	// However, since the order in which stylesheets are referenced matters, you might need a more specific location in your document.
-	// If so, pass a different reference element to the `before` argument and it'll insert before that instead
-	// note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
-	var ss = window.document.createElement( "link" );
-	var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
-	var sheets = window.document.styleSheets;
-	ss.rel = "stylesheet";
-	ss.href = href;
-	// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
-	ss.media = "only x";
-	// DEPRECATED
-	if( callback ) {
-		ss.onload = callback;
-	}
-
-	// inject link
-	ref.parentNode.insertBefore( ss, ref );
-	// This function sets the link's media back to `all` so that the stylesheet applies once it loads
-	// It is designed to poll until document.styleSheets includes the new sheet.
-	ss.onloadcssdefined = function( cb ){
-		var defined;
-		for( var i = 0; i < sheets.length; i++ ){
-			if( sheets[ i ].href && sheets[ i ].href === ss.href ){
-				defined = true;
-			}
-		}
-		if( defined ){
-			cb();
-		} else {
-			setTimeout(function() {
-				ss.onloadcssdefined( cb );
-			});
-		}
-	};
-	ss.onloadcssdefined(function() {
-		ss.media = media || "all";
-	});
-	return ss;
-}
-
-    loadCSS( 'stylesheets/all-0a4e9074.css', document.getElementById("loadcss") );
-    </script>
-    <noscript><link href="stylesheets/all-0a4e9074.css" rel="stylesheet" type="text/css" /></noscript>
-
+    <link href="stylesheets/all-0a4e9074.css" rel="stylesheet" type="text/css" />
 
   </head>
 
