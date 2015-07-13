@@ -89,6 +89,9 @@ GEM
       sprockets-sass (~> 1.3.0)
     minitest (5.7.0)
     multi_json (1.11.1)
+    neat (1.7.2)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -138,6 +141,7 @@ DEPENDENCIES
   middleman (~> 3.3.12)
   middleman-deploy (~> 1.0)
   middleman-livereload (~> 3.1.0)
+  neat
 
 BUNDLED WITH
    1.10.4
