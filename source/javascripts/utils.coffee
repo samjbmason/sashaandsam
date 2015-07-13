@@ -1,6 +1,3 @@
-stripeKey = $('body').data('stripe')
-Stripe.setPublishableKey(stripeKey)
-
 $.fn.toggleInputError = (erred) ->
   this.toggleClass('has-error', erred)
   if erred
