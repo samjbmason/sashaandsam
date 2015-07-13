@@ -11,6 +11,9 @@ html:before {
   left: 0;
   right: 0;
   top: 0;
+  @include media($med) {
+    height: 10px;
+  }
 }
 
 html:after {
@@ -18,6 +21,9 @@ html:after {
   top: 0;
   right: 0;
   bottom: 0;
+  @include media($med) {
+    width: 10px;
+  }
 }
 
 body:before{
@@ -25,6 +31,9 @@ body:before{
   right:0;
   bottom:0;
   left:0;
+  @include media($med) {
+    height: 10px;
+  }
 }
 
 body:after{
@@ -32,4 +41,7 @@ body:after{
   top:0;
   bottom:0;
   left:0;
+  @include media($med) {
+    width: 10px;
+  }
 }

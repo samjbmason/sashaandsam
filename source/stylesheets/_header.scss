@@ -2,10 +2,16 @@
   position: relative;
   z-index: 10;
   padding: 20px;
+  @include media($med) {
+    padding: 10px 0;
+  }
 }
 
 .site-header__logo {
   width: 180px;
+  @include media($med) {
+    width: 80px;
+  }
 }
 
 .site-header__title {
@@ -16,12 +22,18 @@
   a {
     color: currentcolor;
   }
+  @include media($med) {
+    font-size: 1.25rem;
+  }
 }
 
 .site-header__date {
   font-family: $sp-font;
   font-weight: 400;
   font-size: 3rem;
+  @include media($med) {
+    font-size: 1.5rem;
+  }
 }
 
 .site-header__nav {
@@ -31,6 +43,20 @@
 
   a {
     padding: 0 10px;
+
+    @include media($med) {
+      background-color: $red;
+      display: block;
+      color: #FFFFFF;
+      padding: 10px 0;
+      border-bottom: 1px solid #FFFFFF;
+    }
+  }
+}
+
+.site-header__separator {
+  @include media($med) {
+    display: none;
   }
 }
 
@@ -43,31 +69,50 @@
 
   .site-header__nav {
     font-size: 1.5rem;
+    @include media($med) {
+      font-size: 1rem;
+    }
   }
 }
 
 .site-header--horizontal {
   display: table;
   width: 100%;
+  @include media($med) {
+    text-align: center;
+  }
 
   .site-header__logo {
     width: 80px;
     display: table-cell;
+    @include media($med) {
+      display: inline-block;
+    }
   }
 
   .site-header__title {
     display: table-cell;
     vertical-align: middle;
     font-size: 1.25rem;
+    @include media($med) {
+      display: block;
+    }
   }
 
   .site-header__date {
     font-size: 1.5rem;
+    @include media($med) {
+      display: block;
+    }
   }
 
   .site-header__nav {
     display: table-cell;
     vertical-align: middle;
     text-align: right;
+    @include media($med) {
+      display: block;
+      text-align: center;
+    }
   }
 }

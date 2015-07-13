@@ -15,6 +15,8 @@ label {
   line-height: 1.4;
   outline: none;
   font-size: 1rem;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 textarea {
@@ -51,10 +53,16 @@ button, input[type="submit"], .btn {
 .field-group--half-width {
   float: left;
   width: 50%;
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
 }
 
 .field-group--last-half input {
   border-left: none;
+  @media screen and (max-width: 420px) {
+    border-left: 1px solid $red;
+  }
 }
 
 .field-w-addon {

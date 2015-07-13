@@ -3,22 +3,31 @@
 }
 
 .hmi {
-  width: 31.76157%;
-  height: 295px;
-  margin-right: 2.35765%;
+  height: 305px;
   margin-top: 3rem;
-  float: left;
   background-color: #FFFFFF;
   text-align: center;
   margin-bottom: 1.25rem;
   padding: 5px;
   position: relative;
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
   img {
     width: 80px;
     border-radius: 50%;
+  }
+  @media screen and (max-width: 420px) {
+    height: auto;
+    @include span-columns(12);
+
+  }
+  @media screen and (min-width: 421px) and (max-width: 660px) {
+    @include span-columns(6);
+    @include omega(2n);
+
+  }
+  @media screen and (min-width: 661px) {
+    @include span-columns(4);
+    @include omega(3n);
+
   }
 }
 
@@ -35,4 +44,9 @@
 .hmi__buy-btn {
   position: absolute;
   bottom: 0;
+  left: 0;
+  @media screen and (max-width: 420px) {
+    position: relative;
+
+  }
 }

@@ -4,3 +4,6 @@ $sp-font: 'Sign Painter', serif;
 $red: #F1896E;
 $black: #594F52;
 $blue: #778692;
+
+$med: new-breakpoint(max-width 855px);
+$small: new-breakpoint(max-width 480px);

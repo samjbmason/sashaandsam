@@ -9,6 +9,9 @@ body {
   font-weight: 400;
   line-height: 1.6;
   padding: 20px;
+  @include media($med) {
+    padding: 10px;
+  }
 }
 
 .container {
@@ -17,6 +20,9 @@ body {
   padding: 20px;
   position: relative;
   z-index: 10;
+  @include media($med) {
+    padding: 10px;
+  }
 }
 
 canvas {
