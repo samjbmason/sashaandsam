@@ -35,6 +35,7 @@ $form.on('submit', ->
 
 
 stripeResponseHandler = (status, response) ->
+  console.log(response)
   if response.error
     $form.find('.payment-errors').html("<span>#{response.error.message}</span>")
     $('.gift-form__button').prop('disabled', false).removeClass('processing')
@@ -49,6 +50,7 @@ makePayment = ->
   formData = $form.serialize()
   siteUrl = $form.attr('action')
   $.post(siteUrl, formData, (data) ->
+    console.log('From Sinatra: ', data)
     finishedPayment(data)
   )
   return false
