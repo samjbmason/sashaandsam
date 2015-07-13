@@ -1,7 +1,7 @@
 - id: 1
   url: donuts
   title: Box of donuts from Voodoo Donuts
-  price: "10.00"
+  price: "1.00"
   description: Amazing donut store in Portland
 
 - id: 2
@@ -49,5 +49,5 @@
 - id: 9
   url: donation
   title: Any <br>donation
-  price: "?"
-  description: Any amount will go a long way towards making this once in a lifetime trip possibe and we will be hugely grateful
+  price: " ?"
+  description: Any amount will go a long way towards making this once in a lifetime trip possible
