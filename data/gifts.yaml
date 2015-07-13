@@ -1,7 +1,7 @@
 - id: 1
   url: donuts
   title: Box of donuts from Voodoo Donuts
-  price: "1.00"
+  price: "10.00"
   description: Amazing donut store in Portland
 
 - id: 2
