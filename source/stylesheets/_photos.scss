@@ -3,6 +3,9 @@
   @include omega(2n);
   text-align: center;
   margin-bottom: 40px;
+  @include media($small) {
+    @include span-columns(12);
+  }
 }
 
 .photo__container {
