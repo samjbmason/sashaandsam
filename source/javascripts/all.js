@@ -1,7 +1,9 @@
 //= require jquery
 //= require jquery.payment
+//= require react
 //= require animate
 //= require utils
 //= require confetti
 //= require payment
 //= require rsvp
+//= require photos
