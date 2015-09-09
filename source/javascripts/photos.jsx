@@ -33,7 +33,7 @@ var PhotoList = React.createClass({
   },
   componentDidMount: function() {
     this.loadPhotosFromServer();
-    // setInterval(this.loadPhotosFromServer, this.props.pollInterval);
+    setInterval(this.loadPhotosFromServer, this.props.pollInterval);
   },
   render: function() {
     if(this.state.data.length != 0) {
@@ -55,4 +55,4 @@ var PhotoList = React.createClass({
   }
 });
 
-React.render(<PhotoList url="https://api.instagram.com/v1/tags/masondecaires/media/recent?client_id=ccab49481c8143309899266e5b17e2c0" pollInterval="2000" />, document.getElementById('r-photos'));
+React.render(<PhotoList url="https://api.instagram.com/v1/tags/masondecaires/media/recent?client_id=ccab49481c8143309899266e5b17e2c0&count=50" pollInterval="5000" />, document.getElementById('r-photos'));
