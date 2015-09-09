@@ -11,3 +11,5 @@ gem 'bourbon'
 gem 'neat'
 
 gem 'middleman-deploy', '~> 1.0'
+
+gem 'middleman-react', '~> 0.13.3'
