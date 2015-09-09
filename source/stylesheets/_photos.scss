@@ -1,0 +1,37 @@
+.photo {
+  @include span-columns(6);
+  @include omega(2n);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.photo__container {
+  border: 1px solid lighten($blue, 30%);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.photo__user {
+  font-family: $font;
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: 300;
+  margin: 0;
+  padding: 8px;
+  @include clearfix;
+  span {
+    vertical-align: middle;
+  }
+}
+
+.photo__user-pic {
+  float: left;
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.photo__nothing-yet{
+  font-family: $font;
+  font-size: 2.2rem;
+}
