@@ -9,7 +9,6 @@ body {
   font-weight: 400;
   line-height: 1.6;
   padding: 20px;
-  padding-top: 100px;
   @include media($med) {
     padding: 10px;
   }
@@ -93,25 +92,5 @@ footer {
   text-align: center;
   img {
     width: 80px;
-  }
-}
-
-// Banner
-.notice {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 30;
-  background-color: $red;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 10px;
-  @include media($med) {
-    position: relative;
-  }
-  a {
-    color: #FFFFFF;
-    border-bottom: 2px solid #FFFFFF;
   }
 }
