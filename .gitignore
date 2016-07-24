@@ -8,7 +8,6 @@
 /.bundle
 /bundle
 
-.rbenv-gemsets
 .ruby-version
 
 # Ignore the build directory

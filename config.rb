@@ -38,8 +38,8 @@ end
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-  set :stripe_publishable_key, 'pk_test_lamQrESkqXdm9SffXRaVfc0W'
-  set :site_url, 'http://sashaandsam-payment.dev'
+  config[:stripe_publishable_key] = 'pk_test_lamQrESkqXdm9SffXRaVfc0W'
+  config[:site_url] = 'http://sashaandsam-payment.dev'
 end
 
 # Methods defined in the helpers block are available in templates
@@ -73,21 +73,6 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
-  set :stripe_publishable_key, 'pk_live_HS4bsPxYf3REsuDr1GKUAz8z'
-  set :site_url, 'https://sashaandsam-payment.herokuapp.com'
-end
-
-
-activate :deploy do |deploy|
-  deploy.method = :git
-  # Optional Settings
-  # deploy.branch   = 'custom-branch' # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-end
-
-activate :react
-
-after_configuration do
-  sprockets.append_path File.dirname(::React::Source.bundled_path_for('react.js'))
+  config[:stripe_publishable_key] = 'pk_live_HS4bsPxYf3REsuDr1GKUAz8z'
+  config[:site_url] = 'https://sashaandsam-payment.herokuapp.com'
 end
