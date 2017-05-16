@@ -30,42 +30,42 @@
 
 @font-face {
   font-family: 'Bambino';
-  src: font-url('2E9A93_0_0.eot');
-  src: url('2E9A93_0_0.eot?#iefix') format('embedded-opentype'),
-    font-url('2E9A93_0_0.woff2') format('woff2'),
-    font-url('2E9A93_0_0.woff') format('woff'),
-    font-url('2E9A93_0_0.ttf') format('truetype');
+  src: url('../fonts/2E9A93_0_0.eot');
+  src: url('../fonts/2E9A93_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2E9A93_0_0.woff2') format('woff2'),
+    url('../fonts/2E9A93_0_0.woff') format('woff'),
+    url('../fonts/2E9A93_0_0.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Bambino';
-  src: font-url('2E9A93_1_0.eot');
-  src: font-url('2E9A93_1_0.eot?#iefix') format('embedded-opentype'),
-    font-url('2E9A93_1_0.woff2') format('woff2'),
-    font-url('2E9A93_1_0.woff') format('woff'),
-    font-url('2E9A93_1_0.ttf') format('truetype');
+  src: url('../fonts/2E9A93_1_0.eot');
+  src: url('../fonts/2E9A93_1_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2E9A93_1_0.woff2') format('woff2'),
+    url('../fonts/2E9A93_1_0.woff') format('woff'),
+    url('../fonts/2E9A93_1_0.ttf') format('truetype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Bambino';
-  src: font-url('2E9A93_2_0.eot');
-  src: font-url('2E9A93_2_0.eot?#iefix') format('embedded-opentype'),
-    font-url('2E9A93_2_0.woff2') format('woff2'),
-    font-url('2E9A93_2_0.woff') format('woff'),
-    font-url('2E9A93_2_0.ttf') format('truetype');
+  src: url('../fonts/2E9A93_2_0.eot');
+  src: url('../fonts/2E9A93_2_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2E9A93_2_0.woff2') format('woff2'),
+    url('../fonts/2E9A93_2_0.woff') format('woff'),
+    url('../fonts/2E9A93_2_0.ttf') format('truetype');
   font-weight: 700;
 }
 
 
 @font-face {
     font-family: 'Sign Painter';
-    src: font-url('sp-hs.eot');
-    src: font-url('sp-hs.eot?#iefix') format('embedded-opentype'),
-         font-url('sp-hs.woff2') format('woff2'),
-         font-url('sp-hs.woff') format('woff'),
-         font-url('sp-hs.ttf') format('truetype');
+    src: url('../fonts/sp-hs.eot');
+    src: url('../fonts/sp-hs.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sp-hs.woff2') format('woff2'),
+         url('../fonts/sp-hs.woff') format('woff'),
+         url('../fonts/sp-hs.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

@@ -11,11 +11,8 @@
 
     <title>Sasha &amp; Sam - 12 September 2015</title>
 
-    <style>
-    <%= partial("stylesheets/critical.css")  %>
-    </style>
-
-    <%= stylesheet_link_tag "all" %>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css" rel="stylesheet">
+    <%= stylesheet_link_tag "style" %>
 
   </head>
 
@@ -39,9 +36,7 @@
 
       _gs('GSN-838081-T');
     </script>
-
-    <script src="https://js.stripe.com/v2/"></script>
-    <script>Stripe.setPublishableKey("<%= config[:stripe_publishable_key] %>")</script>
-    <%= javascript_include_tag 'all', async: true %>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+    <%= javascript_include_tag "bundle", async: true %>
   </body>
 </html>
